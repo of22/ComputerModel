@@ -1,24 +1,11 @@
-﻿using System;
-using ComputerModel.Hardware.Abstract;
-using ComputerModel.Hardware.Interfaces;
+﻿using ComputerModel.Hardware.Abstract;
 
 namespace ComputerModel.Hardware.Concrete
 {
-    public class SamsungSsd : SolidStateDrive, IRunnable
+    public class SamsungSsd : SolidStateDrive
     {
-        public SamsungSsd()
+        public SamsungSsd() : base(240)
         {
-            Volume = 123;
-        }
-
-        public void Start()
-        {
-            Console.WriteLine("SSD started");
-        }
-
-        public void Stop()
-        {
-            Console.WriteLine("SSD stopped");
         }
     }
 }

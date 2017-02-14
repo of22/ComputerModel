@@ -1,19 +1,42 @@
-﻿namespace ComputerModel.Hardware.Interfaces
+﻿using System;
+using ComputerModel.Interfaces;
+
+namespace ComputerModel.Hardware.Abstract
 {
-    public abstract class Gpu
+    public abstract class Gpu : ICooling, ICalculateable
     {
-        private string rpm;
+        protected Gpu( int rpm, int voltage, int ghz)
+        {
+            GHz = ghz;
+            Voltage = voltage;
+            Rpm = rpm;
+        }
 
-        public string Rpm { set; get; }
+        int GHz { get; }
 
-        private readonly int gHz;
+        int Voltage { get; }
 
-        public int GHz { get; set; }
+        public int Rpm { get; set; }
 
-        private readonly int voltage;
+        public void InitializeProcessingUnit()
+        {
+            Console.WriteLine("GPU is ready for use");
+        }
 
-        public int Voltage { set; get; }
+        public void TurnOffProcessingUnit()
+        {
+            Console.WriteLine("Powered off GPU");
+        }
 
+        public void Start()
+        {
+            Console.WriteLine("Started Gpu");
+            Console.WriteLine("Started GPU cooler");
+        }
 
+        public void Stop()
+        {
+            Console.WriteLine("Stopped Gpu");
+        }
     }
 }

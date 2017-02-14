@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ComputerModel.Hardware.Interfaces
+﻿namespace ComputerModel.Interfaces
 {
-    interface ICooling
+    public interface ICooling
     {
-        int Rpm { set; get; }
+        int Rpm { get; set; }
     }
 }

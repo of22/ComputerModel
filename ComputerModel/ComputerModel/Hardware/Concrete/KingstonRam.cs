@@ -1,25 +1,12 @@
-﻿using System;
-using ComputerModel.Hardware.Interfaces;
+﻿using ComputerModel.Hardware.Abstract;
 
 namespace ComputerModel.Hardware.Concrete
 {
-    public class KingstonRam : Ram, IRunnable
+    public class KingstonRam : Ram
     {
-        public KingstonRam()
+        public KingstonRam() : base(10, 1600, 16)
         {
-            Volume = 15;
-            MHz = 1600;
-            Timings = 10;
         }
 
-        public void Start()
-        {
-            Console.WriteLine("Ram started");
-        }
-
-        public void Stop()
-        {
-            Console.WriteLine("Ram stopped");
-        }
     }
 }

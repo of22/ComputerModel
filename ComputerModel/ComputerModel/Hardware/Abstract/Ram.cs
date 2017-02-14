@@ -1,18 +1,31 @@
-﻿namespace ComputerModel.Hardware.Interfaces
+﻿using System;
+using ComputerModel.Interfaces;
+
+namespace ComputerModel.Hardware.Abstract
 {
-    public abstract class Ram
+    public abstract class Ram : IRunnable
     {
-        public readonly int timings ;
+        protected Ram (int timings, int mHz, int volume )
+        {
+            Timings = timings;
+            MHz = mHz;
+            Volume = volume;
+        }
 
-        public int Timings { set; get; }
+        public int Timings { get; set; }
 
-        public readonly int mHz ;
+        public int MHz { get; set; }
 
-        public int MHz { set; get; }
+        public int Volume { get; set; }
 
-        public readonly int volume ;
+        public void Start()
+        {
+            Console.WriteLine("Ram started");
+        }
 
-        public int Volume { set; get; }
-
+        public void Stop()
+        {
+            Console.WriteLine("Ram stopped");
+        }
     }
 }

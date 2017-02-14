@@ -1,24 +1,12 @@
-﻿using System;
-using ComputerModel.Hardware.Abstract;
-using ComputerModel.Hardware.Interfaces;
+﻿using ComputerModel.Hardware.Abstract;
 
 namespace ComputerModel.Hardware.Concrete
 {
-    public class Chieftec : PowerSupply, IRunnable
+    public class Chieftec : PowerSupply
     {
-        public Chieftec()
+        public Chieftec() : base (500)
         {
-            Power = 400;       
-        }
 
-        public void Start()
-        {
-            Console.WriteLine("Turned on power supply");
-        }
-
-        public void Stop()
-        {
-            Console.WriteLine("Turned off power supply");
         }
 
     }

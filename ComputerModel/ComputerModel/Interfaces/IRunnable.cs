@@ -1,7 +1,6 @@
-﻿
-namespace ComputerModel.Hardware.Interfaces
+﻿namespace ComputerModel.Interfaces
 {
-    interface IRunnable
+    public interface IRunnable
     {
         void Start();
         void Stop();

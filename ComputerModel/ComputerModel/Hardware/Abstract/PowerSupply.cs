@@ -1,9 +1,27 @@
-﻿namespace ComputerModel.Hardware.Abstract
-{
-    public abstract class PowerSupply
-    {
-        //public readonly int power; // ask how to deal with private readonly fields that have to be set up with Property set method  
+﻿using System;
+using ComputerModel.Interfaces;
 
-        public int Power { set; get; }
+namespace ComputerModel.Hardware.Abstract
+{
+    public abstract class PowerSupply : IRunnable
+    {
+        protected PowerSupply(int power)
+        {
+            Power = power;
+        }
+
+        public int Power { get; }
+
+        public void Start()
+        {
+            Console.WriteLine("Turned on power supply");
+            Console.WriteLine($"Power supply power =  {Power} watt");
+        }
+
+        public void Stop()
+        {
+            Console.WriteLine("Turned off power supply");
+        }
+
     }
 }

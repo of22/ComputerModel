@@ -1,10 +1,9 @@
-﻿namespace ComputerModel.Hardware.Interfaces
+﻿namespace ComputerModel.Interfaces
 {
-    interface ICalculateable
+    public interface ICalculateable
     {
         void InitializeProcessingUnit();
 
         void TurnOffProcessingUnit();
-
     }
 }

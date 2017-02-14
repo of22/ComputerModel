@@ -1,36 +1,13 @@
-﻿using System;
-using ComputerModel.Hardware.Abstract;
-using ComputerModel.Hardware.Interfaces;
-using ComputerModel.Software.Concrete;
+﻿using ComputerModel.Hardware.Abstract;
+using ComputerModel.Software.Abstract;
+
 
 namespace ComputerModel.Hardware.Concrete
 {
-    public class AsrockH87 : Motherboard, IRunnable
+    public class AsrockH87 : Motherboard
     {
-        public AsrockH87()
+        public AsrockH87(Cpu cpu, Ram ram, CpuFan cpuFan, SolidStateDrive solidStateDrive, Gpu gpu,Bios bios) : base(cpu, ram, cpuFan, solidStateDrive, gpu, bios)
         {
-            SolidStateDrive = new SamsungSsd();
-            CpuFan = new ZalmanOptima();
-            Ram = new KingstonRam(); 
-            Cpu = new IntelXeon();
-            ComputerBoxFan = new ComputerBoxFanZalman();
-            Bios = new AsrockBios();
-        }
-
-
-        public void Start()
-        {
-            Console.WriteLine("Motherboard started");
-        }
-
-        public void Stop()
-        {
-            Console.WriteLine("Motherboard stopped");
-        }
-
-        public override void InitBios()
-        {
-
         }
     }
 }
