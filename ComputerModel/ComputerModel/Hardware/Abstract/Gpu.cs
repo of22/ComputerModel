@@ -3,7 +3,7 @@ using ComputerModel.Interfaces;
 
 namespace ComputerModel.Hardware.Abstract
 {
-    public abstract class Gpu : ICooling, ICalculateable
+    public abstract class Gpu : ICooling, ICalculateable, IRunnable
     {
         protected Gpu( int rpm, int voltage, int ghz)
         {
