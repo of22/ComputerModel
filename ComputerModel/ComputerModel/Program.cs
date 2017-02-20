@@ -1,31 +1,33 @@
 ﻿using System;
-using ComputerModel.Hardware.Abstract;
 using ComputerModel.Hardware.Concrete;
 using ComputerModel.Software.Concrete;
 
 namespace ComputerModel
 {
+    using Hardware.Interfaces;
+
     class Program
     {
         static void Main()
         {
 
-            ComputerBox zalmanZ11 = StartComputer();
+            ComputerBoxZalmanZ11 zalmanZ11 = StartComputer();
 
-            zalmanZ11.InitHardware();
+            zalmanZ11.PowerOnAndInitBios(zalmanZ11.Motherboard);
 
             Console.ReadLine();
-
         }
 
-        public static ComputerBox StartComputer() => new ComputerBoxZalmanZ11(
+        public static ComputerBoxZalmanZ11 StartComputer() => new ComputerBoxZalmanZ11(
             new AsrockH87(
                 new IntelXeon(), 
                 new KingstonRam(),
-                new ZalmanOptima(100),
+                new ZalmanOptima(),
                 new SamsungSsd(),
-                new NVidia(), 
-                new AsrockBios(2) 
+                new NVidia(
+                    new AsusGpuFan()
+                    ), 
+                new AsrockBios() 
             ),
             new ComputerBoxFanZalman(),
             new Chieftec()  

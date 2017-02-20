@@ -1,17 +1,40 @@
 ﻿using System;
-using ComputerModel.Hardware.Abstract;
 
 namespace ComputerModel.Hardware.Concrete
 {
-    public class ComputerBoxZalmanZ11 : ComputerBox
+    using Interfaces;
+
+    public class ComputerBoxZalmanZ11 : IComputerBox
     {
-        public ComputerBoxZalmanZ11(Motherboard motherboard, ComputerBoxFan computerBoxFan, PowerSupply powerSupply) : base(motherboard, computerBoxFan, powerSupply)
-        {          
+        public IMotherboard Motherboard { get; }
+        public IFan ComputerBoxFan { get; }
+        public IPowerSupply PowerSupply { get; }
+
+        public ComputerBoxZalmanZ11(IMotherboard motherboard, IFan computerBoxFan, IPowerSupply powerSupply)
+        {
+            Motherboard = motherboard;
+            ComputerBoxFan = computerBoxFan;
+            PowerSupply = powerSupply;
         }
 
-        public void ChangeState()
+        public  void Start()
         {
-            Console.WriteLine("Pressed power button");       
+            Console.WriteLine("Started Computer");
         }
-    }
+
+        public void Stop()
+        {
+            Console.WriteLine("Stopped Computer");
+        }
+
+        public void PowerOnAndInitBios(IMotherboard motherboard)
+        {
+            PowerSupply.Start();
+            ComputerBoxFan.Start();
+            motherboard.Start();
+            motherboard.Bios.Start(motherboard);
+            Console.WriteLine("***** Turned on Computer ******");
+        }
+
+}
 }

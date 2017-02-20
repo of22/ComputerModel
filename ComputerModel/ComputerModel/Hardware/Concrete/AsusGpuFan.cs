@@ -4,12 +4,15 @@
     using Enums;
     using Interfaces;
 
-    class ComputerBoxFanZalman : IFan
+    class AsusGpuFan : IFan
     {
-        public ComputerBoxFanZalman()
+        public AsusGpuFan()
         {
+            Rpm = 100;
             CoolingCharestiristics = CoolingCharestiristics.Flow;
         }
+        public int Rpm { get; set; }
+        public CoolingCharestiristics CoolingCharestiristics { get; }
 
         public void Start()
         {
@@ -21,7 +24,5 @@
             Console.WriteLine("Stopped computerBoxFan");
         }
 
-        public int Rpm { get; set; }
-        public CoolingCharestiristics CoolingCharestiristics { get; }
     }
 }

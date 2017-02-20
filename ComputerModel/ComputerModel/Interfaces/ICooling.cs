@@ -1,6 +1,6 @@
 ﻿namespace ComputerModel.Interfaces
 {
-    public interface ICooling
+    public interface ICoolable
     {
         int Rpm { get; set; }
     }

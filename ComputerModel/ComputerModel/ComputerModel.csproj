@@ -44,16 +44,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\CoolingCharestiristics.cs" />
-    <Compile Include="Hardware\Abstract\ComputerBox.cs" />
-    <Compile Include="Hardware\Abstract\ComputerBoxFan.cs" />
-    <Compile Include="Hardware\Abstract\Cpu.cs" />
-    <Compile Include="Hardware\Abstract\CpuFan.cs" />
-    <Compile Include="Hardware\Abstract\Gpu.cs" />
-    <Compile Include="Hardware\Abstract\Motherboard.cs" />
-    <Compile Include="Hardware\Abstract\PowerSupply.cs" />
-    <Compile Include="Hardware\Abstract\Ram.cs" />
-    <Compile Include="Hardware\Abstract\SolidStateDrive.cs" />
+    <Compile Include="Hardware\Interfaces\IComputerBox.cs" />
+    <Compile Include="Hardware\Interfaces\IFan.cs" />
+    <Compile Include="Hardware\Interfaces\ICpu.cs" />
+    <Compile Include="Hardware\Interfaces\IGpu.cs" />
+    <Compile Include="Hardware\Interfaces\IMotherboard.cs" />
+    <Compile Include="Hardware\Interfaces\IPowerSupply.cs" />
+    <Compile Include="Hardware\Interfaces\IRam.cs" />
+    <Compile Include="Hardware\Interfaces\ISolidStateDrive.cs" />
     <Compile Include="Hardware\Concrete\AsrockH87.cs" />
+    <Compile Include="Hardware\Concrete\AsusGpuFan.cs" />
     <Compile Include="Hardware\Concrete\Chieftec.cs" />
     <Compile Include="Hardware\Concrete\IntelXeon.cs" />
     <Compile Include="Hardware\Concrete\NVidia.cs" />
@@ -68,9 +68,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Software\Abstract\Bios.cs" />
-    <Compile Include="Software\Abstract\OperatingSystem.cs" />
     <Compile Include="Software\Concrete\AsrockBios.cs" />
-    <Compile Include="Interfaces\IManageable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

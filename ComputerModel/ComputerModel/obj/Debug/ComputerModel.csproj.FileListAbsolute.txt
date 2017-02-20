@@ -5,3 +5,9 @@ D:\C_sharp\Projects\Project Computer\ComputerModel\ComputerModel\bin\Debug\Compu
 D:\C_sharp\Projects\Project Computer\ComputerModel\ComputerModel\bin\Debug\ComputerModel.pdb
 D:\C_sharp\Projects\Project Computer\ComputerModel\ComputerModel\obj\Debug\ComputerModel.exe
 D:\C_sharp\Projects\Project Computer\ComputerModel\ComputerModel\obj\Debug\ComputerModel.pdb
+D:\Projects\Model\ComputerModel\ComputerModel\ComputerModel\bin\Debug\ComputerModel.exe.config
+D:\Projects\Model\ComputerModel\ComputerModel\ComputerModel\obj\Debug\ComputerModel.csprojResolveAssemblyReference.cache
+D:\Projects\Model\ComputerModel\ComputerModel\ComputerModel\bin\Debug\ComputerModel.exe
+D:\Projects\Model\ComputerModel\ComputerModel\ComputerModel\bin\Debug\ComputerModel.pdb
+D:\Projects\Model\ComputerModel\ComputerModel\ComputerModel\obj\Debug\ComputerModel.exe
+D:\Projects\Model\ComputerModel\ComputerModel\ComputerModel\obj\Debug\ComputerModel.pdb

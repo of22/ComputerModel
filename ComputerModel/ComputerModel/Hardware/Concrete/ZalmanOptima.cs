@@ -1,11 +1,28 @@
-﻿using ComputerModel.Hardware.Abstract;
-
-namespace ComputerModel.Hardware.Concrete
+﻿namespace ComputerModel.Hardware.Concrete
 {
-    public class ZalmanOptima : CpuFan
+    using System;
+    using Enums;
+    using Interfaces;
+
+    public class ZalmanOptima : IFan
     {
-        public ZalmanOptima(int rpm) : base(rpm)
+        public ZalmanOptima()
         {
+            Rpm = 100;
+            CoolingCharestiristics = CoolingCharestiristics.Pressure;
         }
+
+        public void Start()
+        {
+            Console.WriteLine("Started CPU fan");
+        }
+
+        public void Stop()
+        {
+            Console.WriteLine("Stopped CPU fan");
+        }
+
+        public int Rpm { get; set; }
+        public CoolingCharestiristics CoolingCharestiristics { get; }
     }
 }
